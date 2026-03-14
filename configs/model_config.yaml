@@ -1,0 +1,12 @@
+# Cấu hình model
+models:
+  ovis:
+    hf_id: "AIDC-AI/Ovis2.5-9B"
+    env_var: "VQA_MODEL_OVIS"   # Override bằng biến môi trường nếu muốn dùng local path
+
+# Quantization mặc định
+quantization:
+  bits: 8                        # 4 hoặc 8
+  bnb_4bit_compute_dtype: "float16"
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_use_double_quant: true
