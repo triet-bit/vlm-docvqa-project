@@ -1,5 +1,5 @@
 torch>=2.0.0
-transformers>=4.46.0
+transformers==4.51.3
 accelerate
 bitsandbytes
 datasets
