@@ -50,7 +50,7 @@ def load_model(model_key: str = "ovis", bits: int | None = 8):
         raise ValueError(f"bits phải là 4 or 8 or None, nhận được: {bits}")
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
-        device_map="auto",
+        device_map="cuda",
         trust_remote_code=True,
         quantization_config=quantization_config,
     )
